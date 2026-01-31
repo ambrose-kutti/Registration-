@@ -39,6 +39,5 @@ def create_tables():
         print(f"Error creating tables: {e}")
     finally:
         conn.close()
-        
 if __name__ == "__main__":
     create_tables() # Allow running as a script: `python db/create_db.py` or `python -m db.create_db`
