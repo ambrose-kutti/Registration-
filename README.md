@@ -2,14 +2,16 @@ A simple **user registration web application** built with **Python (Flask)**, **
 
 ## 📂 Project Structure
 
+```
+.
 ├── app.py
-├──  face_embeddings.py 
-├── requirements.txt
-├── static/
-    └── style.css
+├── face_embeddings.py 
+├── static
+│   └── style.css
     └── script.js
-└── templates/
-    └── index.html`
+└── templates
+    └── index.html
+```
 
 ## 🚀 Features
 
@@ -22,9 +24,9 @@ A simple **user registration web application** built with **Python (Flask)**, **
 ## ⚙️ Installation
 
 ### Prerequisites
-- Python 3.8+  
-- PostgreSQL installed and running  
-- Git
+- Python 3.9+  
+- PostgreSQL installed and running with correct configurations and details
+- Flask
 
 ## 🛠 Usage
 Open the app in your browser (http://127.0.0.1:5000/)
