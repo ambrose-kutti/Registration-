@@ -121,20 +121,18 @@ Registration_UI_with_Postgres/
 ├── .gitignore             # Specifies intentionally untracked files to ignore
 ├── README.md              # Project README file
 ├── app.py                 # Main Flask application entry point, defines routes and logic
-├── database/              # Directory for database-related scripts or schema (currently empty)
+├── database/              # Directory for database-related scripts
+  ├── connection.py
+  ├── create_db.py
 ├── face_embeddings.py     # Module for generating and comparing facial embeddings
 ├── requirements.txt       # Python dependency list
-├── static/                # Static assets (CSS, JavaScript, images)
-│ ├── css/
-│ │ └── style.css          # Main stylesheet
-│ └── js/
-│ └── scripts.js           # Frontend JavaScript (e.g., for webcam interaction)
+├── static/                # Static assets (CSS, JavaScript)
+  ├── css/
+    └── style.css          # Main stylesheet
+  └── js/
+    └── script.js          # Frontend JavaScript (e.g., for webcam interaction)
 ├── templates/             # Jinja2 HTML templates for rendered views
-│ ├── base.html            # Base template for consistent UI
-│ ├── register.html        # Registration form page
-│ ├── login.html           # Login form page
-│ └── dashboard.html       # User dashboard/profile page
-└── .env.example           # Example environment variables file (if provided, otherwise inferred)
+  ├── index.html           # Base template for consistent UI
 ```
 
 ## ⚙️ Configuration
@@ -161,50 +159,6 @@ The application relies on environment variables for sensitive data and configura
 3.  Run `flask run`.
 4.  Modify Python code in `app.py`, `face_embeddings.py`, or static/templates files. Flask development server typically reloads on code changes.
 
-## 🧪 Testing
-
-This project currently does not include an explicit testing framework or test suite. Development relies on manual testing.
-
-## 🚀 Deployment
-
-To deploy this Flask application to a production environment:
-
-### Production Build
-There is no specific "build" step for this Flask application. The Python code runs directly.
-
-### Deployment Options
--   **WSGI Server**: For production, it's recommended to use a production-ready WSGI server like Gunicorn or uWSGI to serve the Flask application.
-    ```bash
-    # Example with Gunicorn
-    pip install gunicorn
-    gunicorn -w 4 app:app
-    ```
--   **Reverse Proxy**: Place a reverse proxy (e.g., Nginx, Apache) in front of the WSGI server for load balancing, SSL termination, and serving static files efficiently.
--   **Cloud Platforms**: Deploy to platforms like Heroku, AWS Elastic Beanstalk, Google App Engine, or a custom VPS. Ensure PostgreSQL is configured as a managed service or on a separate server.
-
-## 📚 API Reference
-
-This application uses server-side rendering but exposes the following functional routes:
-
-### Authentication
-User authentication is handled via session management within Flask.
-
-### Endpoints
-
--   **`GET /`**
-    -   Displays the home page, typically redirecting to `/register` or `/login`.
--   **`GET /register`**
-    -   Renders the user registration form.
--   **`POST /register`**
-    -   Handles new user registration. Expects form data including `username`, `email`, `password`, and an optional `face_image` file. Processes password hashing and face embedding generation, then stores data in PostgreSQL.
--   **`GET /login`**
-    -   Renders the user login form.
--   **`POST /login`**
-    -   Handles user login. Expects `email` and `password`. Verifies credentials and creates a user session.
--   **`GET /dashboard`**
-    -   (Requires authentication) Displays the authenticated user's profile or dashboard.
--   **`GET /logout`**
-    -   Logs out the current user and clears the session.
 
 ## 🤝 Contributing
 
@@ -216,13 +170,6 @@ We welcome contributions! If you'd like to contribute, please follow these steps
 4.  Commit your changes (`git commit -m 'Add Your Feature'`).
 5.  Push to the branch (`git push origin feature/YourFeatureName`).
 6.  Open a Pull Request.
-
-### Development Setup for Contributors
-The development setup described in the [Quick Start](#quick-start) section is suitable for contributors.
-
-## 📄 License
-
-This project is currently unlicensed. Please refer to the repository owner for licensing information.
 
 ## 🙏 Acknowledgments
 
