@@ -31,7 +31,19 @@ This project is a robust web application designed for user registration and mana
 ## 🖥️ Screenshots
 
 <!-- TODO: Add actual screenshots of the registration form, login page, and any user dashboard. -->
-<!-- ![Registration Page](path-to-registration-screenshot.png) -->
+**Step:1:  Registration form**
+
+<img width="1366" height="720" alt="Screenshot 2026-02-07 110014" src="https://github.com/user-attachments/assets/a085999f-491a-4495-bdf1-27a3eaaa89b5" />
+
+**Step:2: Capture the Face angles**
+
+<img width="1366" height="720" alt="Screenshot 2026-02-07 110116" src="https://github.com/user-attachments/assets/e7a70a15-0d51-4f7a-89b3-497ea20c3d11" />
+<img width="1366" height="720" alt="Screenshot 2026-02-07 110148" src="https://github.com/user-attachments/assets/188fd538-1974-4cfd-95ca-c9106f1fcf4b" />
+
+**Step:3: Success Text with Embeddings Stored in DB**
+
+<img width="1366" height="720" alt="Screenshot 2026-02-07 110229" src="https://github.com/user-attachments/assets/331dfd80-7b28-477b-9bd7-f4634e79eb3c" />
+
 <!-- ![Login Page](path-to-login-screenshot.png) -->
 <!-- ![Dashboard/Profile Page](path-to-dashboard-screenshot.png) -->
 
